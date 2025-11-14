@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Your Shopping Cart</h2>
+    {% if not cart.items.all %}
+        <p>Your cart is empty.</p>
+    {% else %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart.items.all %}
+                    <tr>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.product.price }}</td>
+                        <td>${{ item.total_price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="text-right">
+            <h3>Total: ${{ cart.total_price }}</h3>
+            <form action="{% url 'initiate_payment' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Pay with Paystack</button>
+            </form>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

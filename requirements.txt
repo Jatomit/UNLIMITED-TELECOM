@@ -1,3 +1,8 @@
-Django==5.2.7
+Django
+django-environ
+gunicorn
+psycopg2-binary
+whitenoise
+django-paystack
 mysqlclient==2.2.7
 python-dotenv==1.1.1

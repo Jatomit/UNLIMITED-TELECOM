@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap');
+
+:root {
+    --primary-color: #0D0D2B;
+    --secondary-color: #3671E9;
+    --accent-color: #2B076E;
+    --bg-light: #FFFFFF;
+    --bg-gray: #F8F9FA;
+    --text-light: #FFFFFF;
+    --text-dark: #0D0D2B;
+    --font-headings: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2d62c8;
+    border-color: #2d62c8;
+}
+
+.navbar-brand {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    color: var(--text-light) !important;
+}
+
+.hero {
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    color: var(--text-light);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.services-section {
+    padding: 80px 0;
+    background-color: var(--bg-gray);
+}
+
+.service-card {
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: var(--bg-light);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 0;
+    text-align: center;
+}

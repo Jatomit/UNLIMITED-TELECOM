@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Checkout Complete</h2>
+    <p>Thank you for your order. Your order number is <strong>{{ order.id }}</strong>.</p>
+    <p>We will process your order shortly.</p>
+    <a href="{% url 'index' %}" class="btn btn-primary">Continue Shopping</a>
+</div>
+{% endblock %}
