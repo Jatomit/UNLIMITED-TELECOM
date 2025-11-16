@@ -4,6 +4,8 @@ paths:
   static: ''
 _snippets_imports:
   jekyll: true
+editor:
+  default_path: /core/admin.py
 timezone: Africa/Lagos
 markdown:
   engine: kramdown
